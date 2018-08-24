@@ -115,5 +115,6 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        //System.out.println(Scheduler.getInstance().getSubsystem() + " " + Scheduler.getInstance().getName());
     }
 }

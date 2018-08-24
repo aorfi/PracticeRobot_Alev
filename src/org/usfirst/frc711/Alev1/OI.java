@@ -71,16 +71,14 @@ public class OI {
         
         joystickButton1 = new JoystickButton(joystick1, 1);
         joystickButton1.whileHeld(new StopCommand());
-        joystickButton2 = new JoystickButton(joystick1, 5);
+        joystickButton2 = new JoystickButton(joystick1, 3);
         joystickButton2.whileHeld(new GearShift(1));
-		joystickButton3 = new JoystickButton(joystick1, 6);
+		joystickButton3 = new JoystickButton(joystick1, 4);
 		joystickButton3.whileHeld(new GearShift(2));
 		joystickButton4 = new JoystickButton(joystick1, 5);
+		joystickButton3.whileHeld(new MoveIntake());
 		joystickButton5 = new JoystickButton(joystick1, 6);
-		
-		
-		
-
+		joystickButton3.whileHeld(new MoveIntake());
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new DriveForwardCommand(10000));
@@ -93,9 +91,7 @@ public class OI {
         joystick1.setYChannel(5);
     	joystick1.setXChannel(1);
     	joystick1.setTwistChannel(2);
-    	joystick1.setThrottleChannel(3);
-    
-    	
+    	joystick1.setThrottleChannel(3); 	
     	
     }
 

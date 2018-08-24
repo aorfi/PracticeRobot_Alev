@@ -46,6 +46,7 @@ public class MoveElevator extends Command {
     @Override
     protected void execute() {
     	Robot.elevator.elevatorDrive(Robot.oi.getJoystick1());
+    	System.out.println("Elevator:MoveElevatorCommand");
     	
     }
 

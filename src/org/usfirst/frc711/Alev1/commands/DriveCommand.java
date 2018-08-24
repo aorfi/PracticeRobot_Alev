@@ -48,8 +48,9 @@ public class DriveCommand extends Command {
     	int rightVelocity = Robot.drive.getRightSpeed();
     	int leftPosition = Robot.drive.getLeftPosition();
     	int rightPosition = Robot.drive.getRightPosition();
-   		System.out.println("RSpeed: " + rightVelocity + " LSpeed: " + leftVelocity +" RPosition: " + rightPosition + " LPosition: " + leftPosition);
-   		Robot.elevator.elevatorDrive(Robot.oi.getJoystick1());
+//   		System.out.println("RSpeed: " + rightVelocity + " LSpeed: " + leftVelocity +" RPosition: " + rightPosition + " LPosition: " + leftPosition);
+    	System.out.println("Drive:DriveCommand");
+    	Robot.elevator.elevatorDrive(Robot.oi.getJoystick1());
     }
 
     // Make this return true when this Command no longer needs to run execute()

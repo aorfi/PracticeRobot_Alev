@@ -117,11 +117,27 @@ public class Drive extends Subsystem {
     	else if ((xValue > -deadbandThreshold) & (xValue < 0)) {
     		xValue = 0;
     	}
+    	else if (xValue > 0)
+    	{
+    		xValue = xValue - deadbandThreshold;
+    	}
+    	else if (xValue < 0)
+    	{
+    		xValue = xValue + deadbandThreshold;
+    	}
     	if ((yValue < deadbandThreshold) & (yValue > 0)) {
     		yValue = 0;
     	}
     	else if ((yValue > -deadbandThreshold) & (yValue < 0)) {
     		yValue = 0;
+    	}
+    	else if (yValue > 0)
+    	{
+    		yValue = yValue - deadbandThreshold;
+    	}
+    	else if (yValue < 0)
+    	{
+    		yValue = yValue + deadbandThreshold;
     	}
     	left.set(xValue);
     	right.set(yValue);

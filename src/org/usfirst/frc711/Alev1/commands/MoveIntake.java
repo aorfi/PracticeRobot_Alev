@@ -46,6 +46,7 @@ public class MoveIntake extends Command {
     @Override
     protected void execute() {
     	Robot.intake.intakeDrive();
+    	System.out.println("MoveIntakeCommand");
     	
     }
 
